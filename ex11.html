@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<script> 
+var ano_nasc,ano_adm, codigo,ano_atual, idade,tempo_trabalho
+
+ano_atual = 2020;
+
+    codigo = parseInt(prompt("Digite o codigo do empregado: "));
+    ano_nasc = parseInt( prompt("Digite o ano de nascimento: "));
+    ano_adm = parseInt( prompt("Digite o ano de admissão: "));
+
+
+    idade = ano_atual - ano_nasc;
+    tempo_trabalho = ano_atual - ano_adm;
+
+        if(idade >= 65){
+            alert("Requerer");
+            
+        }
+        else{
+            if(tempo_trabalho >= 30){
+                alert("Requerer");
+            }
+            else{
+                if(idade >= 60 && tempo_trabalho >=25){
+                    alert("Requerer");
+                }
+                else{
+                    alert("Não requerer");
+                }
+            }
+        }
+        alert("\n"+"Código do funcionario: " +codigo 
+		+ "\nO tempo trabalhado é: " 
+		+ tempo_trabalho+ "\nIdade: " + idade);
+		
+	
+
+
+
+
+
+</script>
