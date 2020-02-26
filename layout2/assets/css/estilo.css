@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+    margin: 0;padding: 0;
+}
+
+@media only screen and (max-device-width:50%){
+   .tamanho{ width: 50%;}
+}
+
+main{
+    width: 100%
+   
+}
+header{
+     height: 180px;
+    background-color: lightskyblue;
+    
+}
+nav{
+    
+    background-color: orangered;
+    height: 450px;
+
+}
+article{
+   
+    background-color: lime;
+    height: 650px;
+}
+section{
+    float: left;
+    width: 324px;
+    height: 500px;
+    margin-left: 94px;
+    border: px solid white;
+    box-shadow:  5px 5px  rgba(0, 0, 0, 0.24);
+   
+}
+h2{
+    color: white;
+    margin-left: 20px;
+}
+h4{
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+footer{
+   
+    height: 420px;
+    background-color: rgb(181, 157, 182);
+}
+iframe{
+      margin-right: 20px;
+      margin-top: 20px;
+      float: right;
+      overflow:auto;
+      width: 512px;
+      height: 320px;
+ 
+}
+
+#CV{
+float: left;
+margin-top: 20px;
+}
+#bt1{
+    margin-top: 40px;
+}
+#equipe{
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+    float: left;
+    border: transparent thin solid;
+
+}
+#texto1{
+    text-align: justify;
+    margin-right: 10px;
+}
+#site{
+    width: 250px;
+    height: 200px;
+    margin-left: 30px;
+    margin-bottom: 25px;
+   
+}
+#sistemas{
+    width: 250px;
+    height: 200px;
+    margin-left: 30px;
+    margin-bottom: 25px;
+ 
+}
+#projetos{
+    width: 250px;
+    height: 200px;
+    margin-left: 30px;
+    margin-bottom: 25px;
+   
+}
+#sec1{
+    background-color: cornflowerblue;
+}
+#sec2{
+    background-color: brown;
+}
+#sec3{
+    background-color: rgb(112, 145, 143);
+}
+#senac{
+  width: 150px;
+  height: 100px;
+  margin-left: 40%;
+   
+}
+#rodape{
+    font-size: 23px;
+    text-align: center;
+    width: 400px;
+    height: 300px;
+   padding-top: 50px;
+   padding-left: 180px;
+}
+.texto2{
+    text-align: justify;
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.button{
+   margin-left: 70%;
+   width: 150px;
+   margin-top: 5px;
+   margin-bottom: 5px;
+   color: white;
+   background-color: orangered;
+   border: 1px solid;
+   border-radius: 10px 10px;
+}
+
