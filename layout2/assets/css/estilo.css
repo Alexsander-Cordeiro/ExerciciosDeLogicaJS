@@ -3,8 +3,8 @@
     margin: 0;padding: 0;
 }
 
-@media only screen and (max-device-width:50%){
-   .tamanho{ width: 50%;}
+@media only screen and (max-device-width:600px){
+   .tamanho{ width: 100%;}
 }
 
 main{
@@ -31,7 +31,7 @@ section{
     float: left;
     width: 324px;
     height: 500px;
-    margin-left: 94px;
+    margin-left: 150px;
     border: px solid white;
     box-shadow:  5px 5px  rgba(0, 0, 0, 0.24);
    
