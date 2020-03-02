@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+
+
+    <script>
+       
+            var palavra = prompt("Digite uma frase: ")
+            palavra= palavra.split(" ")
+            var maior = palavra[0]
+
+           for(var i=1;i<palavra.length;i++) {
+            
+            if(maior.length < palavra[i].length){
+                maior = palavra[i]
+            }
+            
+           }
+          
+          
+           alert(maior)
+     
+   
+
+    </script>
+    
+</body>
+</html>
