@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: blueviolet;
+}
+p{
+    font-style: italic;
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+   
+}
+
+img{
+ margin-left: 50px;
+
+ 
+    
+}
+h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: blueviolet;
+}
+section{
+    float: left;
+    width: 200px;
+    margin: 20px;
+       
+}
+article{
+    margin-right: 20px;
+}
+#java{
+    text-align: justify;
+    float: left;
+    width: 400px;
+    
+}
+#caixa {
+    
+    width: 800px;  
+    margin: 0 auto;
+}
+@media (max-width:500px) {
+    .responsivo {width: 50%;}
+}

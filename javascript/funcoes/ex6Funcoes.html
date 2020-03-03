@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio para adicionar e remover itens de uma lista</title>
+</head>
+
+<style>
+    .item{
+        color: darkblue;
+        border: 1px solid black;
+        border-radius: 5px 5px;
+        width: 100px;
+        text-align: center;
+    }
+
+
+</style>
+
+
+
+<body>
+    <ol id="grupo">
+        <li class="item">a</li>
+        <li class="item">b</li>
+    </ol>
+
+    <button id="adicionar" title="pressione o botão para adicionar" onclick="adicionar()">adicionar</button>
+    <button id="remover" onclick="remover()">remover</button>
+
+    <script>
+        var contador = []
+        function adicionar(){
+            var ol = document.getElementById("grupo")
+            var li = document.createElement("li"); //criação do novo elemento
+            li.className = "item"
+
+            //appendChild faz com que o LI se junte com o OL
+            li.appendChild(document.createTextNode(prompt("Digite um item" )))
+            ol.appendChild(li);
+            contador++
+        }
+
+        function remover(){
+            var ol = document.getElementById("grupo")
+            var li = document.getElementsByClassName("item")
+            ol.removeChild(li[contador]);
+           contador--
+            
+        }
+    
+    
+    </script>
+
+
+    
+</body>
+</html>

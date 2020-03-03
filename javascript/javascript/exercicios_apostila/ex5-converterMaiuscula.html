@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+    <script>
+        function maiusculo(string) {
+
+            var letra = string.split(" ") //transforma string em vetor
+            
+            //funcao replace (valor atual, novo valor)
+            //valor atual = letra[i].slice(0,1) 
+            //novo valor = letra[i].slice(0,1).toUpperCase()
+
+            //funcao slice = retira a cadeia de caracteres de acordo com a posicao mencionada nos parênteses
+
+            for(var i=0;i<letra.length;i++){
+                letra[i] = letra[i].replace(letra[i].slice(0,1), letra[i].slice(0,1).toUpperCase())
+
+            }
+
+            return letra.join(' ')
+
+        }
+        alert(maiusculo(prompt("Digite sua palavra: ")))
+
+
+
+
+    </script>
+    
+</body>
+</html>
