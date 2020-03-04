@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function Carro(marca,anoFabricacao,velocidadeMax,velocidadeAtual) {
+            this.marca = marca;
+            this.anoFabricacao = anoFabricacao;
+            this.velocidadeMax = velocidadeMax;
+            this.velocidadeAtual = velocidadeAtual || 0;
+            
+        }
+
+        //Método acelerar()
+       Carro.prototype.acelerar= function() {
+           if(this.velocidadeAtual < this.velocidadeMax){
+               this.velocidadeAtual = this.velocidadeAtual +1;
+               console.log("Acelerando,velocidade atual do "+this.marca + " é de "+this.velocidadeAtual +"km/h")
+           }
+           else{
+            console.log("Velocidade atual esta no limite permitido!")
+           }
+       }
+
+       //Método desacelerar()
+       Carro.prototype.desacelerar= function(){
+            if(this.velocidadeAtual > 0){
+                this.velocidadeAtual -= 1;
+                console.log("diminuindo,Velocidade atual é " + this.velocidadeAtual+"km/h" );
+            }
+            // else if(this.velocidadeAtual < 0){
+            //     console.log("Negativo não!!!")
+            // }
+            else{
+                console.log("Chegou no maximo!")
+            }
+
+       }
+
+
+
+
+       //instanciar objetos
+       var vA =parseInt(prompt("Digite a velocidade atual: "))
+       carro1 = new Carro("Audi","2020",98,vA)
+
+
+       for(var i=0;i<80;i++){
+           carro1.desacelerar()
+       }
+
+
+       console.log("Marca: "+ carro1.marca + "\nAno de fabricação: " + carro1.anoFabricacao +
+        "\nVelocidade atual: " + carro1.velocidadeAtual+ "\nVelocidade Maxima: "+ carro1.velocidadeMax)
+
+      
+
+
+
+    //    console.log("Marca: "+ carro1.marca + "\nAno de fabricação: " + carro1.anoFabricacao +
+    //     "\nVelocidade atual: " + carro1.velocidadeAtual+ "\nVelocidade Maxima: "+ carro1.velocidadeMax)
+
+    </script>
+
+
+    
+</body>
+</html>

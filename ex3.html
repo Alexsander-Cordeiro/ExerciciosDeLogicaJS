@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções anônimas</title>
+</head>
+<body>
+      <input type="text" id="nome">
+      <input type="button" value="Clique aqui" id="botao">  
+
+
+      <script>
+          //function() - sem nome = função anônima
+
+          var nome //variavel global                 //esse 'click' é um nome de evento que usamos com onclick              
+          document.getElementById('botao').addEventListener('click',function() {
+            nome = document.getElementById('nome').value
+            alert(nome).style.color ="red"
+          })
+          //comando que marca um breakpoint 
+          debugger
+
+          document.getElementById('botao').addEventListener('mouseover',
+          function(){
+              document.getElementById('nome').style.color="green"
+          })
+          document.getElementById('botao').addEventListener('mouseleave',
+          function(){
+              document.getElementById('nome').style.color ="black"
+          })
+
+
+
+
+      </script>
+
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //criando o nosso modelo 
+        //cria o método construtor = constrói o modelo
+        //modelo = conjunto de atributos(caracteristicas) e métodos(ações)
+        //todo modelo começa com letra maiúscula
+
+        //Inicio do método construtor
+        function MinhaCaneta(_cor,_tipo,_tamanho,_temTinta,_material,_espessura,_tampado) {
+               //atributos--------
+               this.cor = _cor;
+               this.tipo = _tipo;
+               this.tamanho = _tamanho;
+               this.temTinta = _temTinta || "s";
+               this.material = _material;
+               this.espessura = _espessura;
+               this.tampado = (_tampado || "sim");
+            //fim dos atributos --------
+        }
+        //fim do método construtor
+
+        //inicio do método abrir
+                //prototype: Todos os objetos JavaScript herdam propriedades e métodos de um protótipo
+        MinhaCaneta.prototype.abrir = function(){
+            if(this.tampado == "sim"){
+                this.tampado = "não"
+                alert("Caneta destampada com sucesso!!")
+            }
+            else{
+                alert("Caneta ja estava aberta")
+            }
+        }
+        //fim do método abrir
+        
+
+        //inicio do método fechar
+
+        MinhaCaneta.prototype.fechar = function(){
+           if(this.tampado == "não"){
+               this.tampado = "sim"
+               alert("Caneta esta tampada")
+           }
+           else{
+               alert("Caneta já esta tampada!!!")
+           }
+        }
+
+
+
+        //fim do método fechar
+
+        //instânciar = cópia do objeto
+        caneta1= new MinhaCaneta("azul","hidrográfica","10cm","","plastico","2 mm","")
+        caneta2 = new MinhaCaneta("verde","esforográfica","15cm","","plastico","0.5 mm","")
+
+        //brincando...
+        //comparar as cores dos 2 objetos caneta
+        if(caneta1.cor == caneta2.cor){
+            alert("As cores são iguais")
+        }
+        else{
+            alert("São diferentes")
+        }
+
+
+        //imprimindo a cor da caneta
+        alert("Cor: "+caneta1.cor + "\nTipo: "+ caneta1.tipo +
+         "\nTamanho: "+caneta1.tamanho+"\nTem tinta: "+caneta1.temTinta +
+        "\nMaterial: " + caneta1.material + "\nEspessura: " + caneta1.espessura + "\nTampado: "+caneta1.tampado)
+      
+        alert("Cor: "+caneta2.cor + "\nTipo: "+ caneta2.tipo +
+         "\nTamanho: "+caneta2.tamanho+"\nTem tinta: "+caneta2.temTinta +
+        "\nMaterial: " + caneta2.material + "\nEspessura: " + caneta2.espessura +
+        "\nTampado: " + caneta2.tampado)
+
+        // caneta2.fechar();
+        // caneta2.abrir();
+        caneta2.abrir();
+        caneta2.fechar();
+
+    </script>
+
+
+
+</body>
+</html>
