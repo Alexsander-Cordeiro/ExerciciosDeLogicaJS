@@ -8,7 +8,13 @@
 
 <body>
 
+    <h1>Carro 1</h1>
+    <button id="ac" onclick="carro1.acelerar()">Acelerar</button>
+    <button id="dc" onclick="carro1.desacelerar()" >Desacelerar</button>
+
     <script>
+        try{
+
         function Carro(marca,anoFabricacao,velocidadeMax,velocidadeAtual) {
             this.marca = marca;
             this.anoFabricacao = anoFabricacao;
@@ -20,7 +26,7 @@
         //Método acelerar()
        Carro.prototype.acelerar= function() {
            if(this.velocidadeAtual < this.velocidadeMax){
-               this.velocidadeAtual = this.velocidadeAtual +1;
+               this.velocidadeAtual ++;
                console.log("Acelerando,velocidade atual do "+this.marca + " é de "+this.velocidadeAtual +"km/h")
            }
            else{
@@ -31,41 +37,26 @@
        //Método desacelerar()
        Carro.prototype.desacelerar= function(){
             if(this.velocidadeAtual > 0){
-                this.velocidadeAtual -= 1;
+                this.velocidadeAtual --;
                 console.log("diminuindo,Velocidade atual é " + this.velocidadeAtual+"km/h" );
             }
-            // else if(this.velocidadeAtual < 0){
-            //     console.log("Negativo não!!!")
-            // }
-            else{
-                console.log("Chegou no maximo!")
+            else {
+                console.log("Negativo não!!!")
             }
-
+           
        }
-
-
 
 
        //instanciar objetos
        var vA =parseInt(prompt("Digite a velocidade atual: "))
        carro1 = new Carro("Audi","2020",98,vA)
 
-
-       for(var i=0;i<80;i++){
-           carro1.desacelerar()
+       console.log("\nMarca: "+ carro1.marca + "\nAno de fabricação: "+ carro1.anoFabricacao+
+       "\nVelocidade atual: "+carro1.velocidadeAtual +"\nVelocidade maxima: "+ carro1.velocidadeMax)
+        }
+       catch (erro){
+        alert("Erro no programa: " + erro)
        }
-
-
-       console.log("Marca: "+ carro1.marca + "\nAno de fabricação: " + carro1.anoFabricacao +
-        "\nVelocidade atual: " + carro1.velocidadeAtual+ "\nVelocidade Maxima: "+ carro1.velocidadeMax)
-
-      
-
-
-
-    //    console.log("Marca: "+ carro1.marca + "\nAno de fabricação: " + carro1.anoFabricacao +
-    //     "\nVelocidade atual: " + carro1.velocidadeAtual+ "\nVelocidade Maxima: "+ carro1.velocidadeMax)
-
     </script>
 
 
