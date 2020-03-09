@@ -12,16 +12,19 @@ h1{
 }
 p{
     font-style: italic;
-    font-size: 20px;
+    font-size: 18px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
    
 }
 
-img{
- margin-left: 50px;
-
- 
-    
+#principal{
+    width: 600px;
+}
+#tarta{
+    width: 50%;
+    float: left;
+    padding-right: 90px;
+    text-align: center;
 }
 h2{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -30,23 +33,37 @@ h2{
 section{
     float: left;
     width: 200px;
-    margin: 20px;
+    padding: 10px;
        
 }
 article{
     margin-right: 20px;
 }
-#java{
+#js{
     text-align: justify;
     float: left;
-    width: 400px;
+    width: 50%;
+    padding:10px;
     
 }
 #caixa {
     
-    width: 800px;  
+    width: 50%;  
     margin: 0 auto;
 }
-@media (max-width:500px) {
-    .responsivo {width: 50%;}
+@media (max-width:90%) {
+    img {
+        display: none;
+    }
 }
+@media (max-width:600px) {
+    img{display: none;}
+    #caixa{width: 100%;background-color: rgb(67, 9, 121);}
+    h2,h1{color: white;}
+    #js{width: 94%;background-color: rgba(0, 39, 211, 0.527);margin:3%;}
+    #sec1{width: 94%;margin:3%;}
+    #sec2{width: 94%; background-color:  rgba(0, 39, 211, 0.527);margin:3%;}
+    #sec3{width: 94%;margin:3%;}
+    article{width: 100%;}
+    body{background-color: lightblue;}
+    }
