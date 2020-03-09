@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        var palavra = prompt("digite uma palavra: ")
+        var vetor=palavra.split("")
+        var resultado=""
+
+        for(var i=0;i<vetor.length;i++){
+            for(var j=0;j<vetor.length;j++){
+                for(var k=0;k<vetor.length;k++){
+                    if(i != j && j != k && i!= k){
+                        resultado=(vetor[i]+vetor[j]+vetor[k])
+                        console.log(resultado)
+
+                    }
+                }
+
+            }
+        }
+        
+
+
+    </script>
+
+
+</body>
+
+</html>
